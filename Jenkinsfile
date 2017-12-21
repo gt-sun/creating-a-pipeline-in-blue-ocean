@@ -6,8 +6,9 @@ pipeline {
         branch 'master'
       }
       steps {
-        sh '''echo "this is build stage for master branch"
-pwd'''
+        sh 'echo "this is build stage for master branch"'
+        input message: 'Finished using the web site? (Click "Proceed" to continue)'
+        sh 'echo ok~'
       }
     }
     stage('build for test') {
