@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('build for master') {
       when {
         branch 'master'
       }
@@ -10,7 +10,7 @@ pipeline {
 pwd'''
       }
     }
-    stage('build') {
+    stage('build for test') {
       when {
         branch 'test'
       }
