@@ -6,8 +6,7 @@ pipeline {
         branch 'master'
       }
       steps {
-        sh 'echo "this is build stage for master branch"'
-        input message: 'Finished using the web site? (Click "Proceed" to continue)'
+        sh 'ssh -i /home/.ssh/id_rsa 54.223.131.75 "bash /root/test.sh"'
         sh 'echo ok~'
       }
     }
