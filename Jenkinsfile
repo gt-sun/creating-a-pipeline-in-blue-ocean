@@ -15,7 +15,7 @@ pwd'''
         branch 'test'
       }
       steps {
-        sh '''echo "this is build stage for test branch"
+        sh '''echo "this is build stage for test branch..."
 pwd'''
       }
     }
